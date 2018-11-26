@@ -14,7 +14,7 @@ The following code resides in Sub subDisplayACPI_Table(sWSName As String):
 It allows for debug style processing by limiting any table size to 500 bytes.  Comment this line out to process until max table size. See note below about DoEvents interrupts.
 
 HIGH LEVEL SPEC:
-Uses VBA to access the registry. On MAIN tab set up Registry Key Root as HKEY_LOCAL_MACHINE, Registry Key Start as HARDWARE\ACPI. The Output File Name is set as ACPI_registry.txt, but this be changed as needed (this file is a stub, is not being populated, but is available if so desired).  Click READ ACPI button to execute code in Module 1 (access this via Developer->Visual Basic interface). All subs and functions reside in Module 1.
+Uses VBA to access the registry. On MAIN tab, set up Registry Key Root as HKEY_LOCAL_MACHINE, Registry Key Start as HARDWARE\ACPI. The Output File Name is set as ACPI_registry.txt, but this be changed as needed (this file is a stub, is not being populated, but is available if so desired).  Click READ ACPI button to execute code in Module 1 (access this via Developer->Visual Basic interface). All subs and functions reside in Module 1.
 
 Tool utilizes Windows dll functions to access the registry. It traverses and recursively parses registry keys until the REG_BINARY level is encountered. It pulls that data into a dynamic array of bytes.  See code in subParseSubKeys(sTableName As String, sKey As String) subroutine:
     ReDim resBinary(0 To lDataLen - 1) As Byte
