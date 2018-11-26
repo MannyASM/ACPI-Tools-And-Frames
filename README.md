@@ -26,7 +26,7 @@ OUTPUT:
 The MAIN tab displays the summary of what is processed. It is a mirror image of what you find in the actual Windows registry for HARDWARE\ACPI.
 
 FORMATTING:
-There is a lot of formatting going on to output data in a useful form. If a simpler style output is needed, leverage the text output file.  Additionally, FADT and RSDT have been fully interpreted to show their Header values as well as their contents. Tab TableFields are the exact ACPI specification for these tables and shows the field layout breakdown. It was coded as such.
+There is a lot of formatting going on to output data in a useful form. If a simpler style output is needed, leverage the text output file.  Additionally, FADT and RSDT have been fully interpreted to show their Header values as well as their contents. Tab TableFields stores the exact ACPI specification for these tables and shows the field layout breakdown. It was coded as such.
 
 STATUS BAR:
 Status bar shows processing activity. Because code uses DoEvents as interrupt to allow other CPU activities, the time it takes to complete all work will vary with the size of the ACPI tables and your particular machine.  
